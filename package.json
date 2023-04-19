@@ -1,6 +1,6 @@
 {
   "name": "nestjs-discord-transporter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Discord event listener for Nestjs",
   "keywords": [
     "discord",
@@ -13,24 +13,26 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist/ @types/",
-    "build": "webpack --mode production",
+    "build": "babel src/ -d dist/ --extensions .ts,.js",
     "prepare": "husky install",
     "gen:types": "tsc -p tsconfig.build.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@types/node": "^18.15.11",
+    "@vitest/coverage-istanbul": "^0.30.1",
     "babel-loader": "^9.1.2",
     "husky": "^8.0.3",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.4",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-node-externals": "^3.0.0"
+    "vitest": "^0.30.1"
   }
 }
