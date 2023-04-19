@@ -2,12 +2,22 @@
   "name": "nestjs-discord-transporter",
   "version": "0.1.0",
   "description": "Discord event listener for Nestjs",
-  "keywords": ["discord", "nestjs", "nestjs-transporter"],
+  "keywords": [
+    "discord",
+    "nestjs",
+    "nestjs-transporter"
+  ],
   "author": "Francisco Damião Terto <contato@damiaoterto.dev>",
   "main": "dist/index.js",
   "types": "@types/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "husky": "^8.0.3"
   }
 }
