@@ -24,11 +24,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Generate Types
-        run: npm run gen:types
-
       - name: Build 🔧
         run: npm run build
+
+      - name: Generate Types
+        run: npm run gen:types
 
       - name: NPM Publish
         run: npm publish
