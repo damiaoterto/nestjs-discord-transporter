@@ -12,14 +12,25 @@
   "types": "@types/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "prebuild": "rimraf dist/ @types/",
+    "build": "webpack --mode production",
     "prepare": "husky install",
     "gen:types": "tsc -p tsconfig.build.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
+    "@types/node": "^18.15.11",
+    "babel-loader": "^9.1.2",
     "husky": "^8.0.3",
-    "typescript": "^5.0.4"
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }
