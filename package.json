@@ -1,0 +1,13 @@
+{
+  "name": "nestjs-discord-transporter",
+  "version": "0.1.0",
+  "description": "Discord event listener for Nestjs",
+  "keywords": ["discord", "nestjs", "nestjs-transporter"],
+  "author": "Francisco Damião Terto <contato@damiaoterto.dev>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "@types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
