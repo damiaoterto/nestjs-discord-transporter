@@ -1,4 +1,2 @@
-export async function bootstrap() {
-  // todo
-}
-bootstrap();
+export * from './discord-transporter.strategy';
+export * from './interfaces/client-options.interface';
