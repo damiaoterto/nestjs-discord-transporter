@@ -15,7 +15,7 @@
     "prebuild": "rimraf dist/ @types/",
     "build": "babel src/ -d dist/ --extensions .ts,.js",
     "prepare": "husky install",
-    "gen:types": "tsc -p tsconfig.build.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
+    "gen:types": "tsc -p tsconfig.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
@@ -27,12 +27,21 @@
     "@babel/preset-typescript": "^7.21.4",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
+    "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
+    "@nestjs/microservices": "^9.4.0",
+    "@nestjs/testing": "^9.4.0",
     "@types/node": "^18.15.11",
     "@vitest/coverage-istanbul": "^0.30.1",
     "babel-loader": "^9.1.2",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "discord.js": "^14.9.0",
     "husky": "^8.0.3",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^5.0.0",
+    "rxjs": "^7.8.0",
     "typescript": "^5.0.4",
     "vitest": "^0.30.1"
-  }
+  },
+  "dependencies": {}
 }
