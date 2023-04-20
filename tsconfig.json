@@ -18,5 +18,13 @@
       "@lib/*": ["./src/*"]
     }
   },
-  "exclude": ["vite.config.ts"]
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "./dist",
+    "node_modules",
+    "test/**/*.spec.ts",
+    "vite.config.ts"
+  ]
 }

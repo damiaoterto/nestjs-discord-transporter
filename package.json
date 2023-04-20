@@ -15,7 +15,7 @@
     "prebuild": "rimraf dist/ @types/",
     "build": "babel src/ -d dist/ --extensions .ts,.js",
     "prepare": "husky install",
-    "gen:types": "tsc -p tsconfig.build.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
+    "gen:types": "tsc -p tsconfig.json --declaration --allowJs --emitDeclarationOnly --outDir @types",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
