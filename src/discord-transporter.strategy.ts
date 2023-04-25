@@ -2,6 +2,7 @@ import { CustomTransportStrategy, Server } from '@nestjs/microservices';
 import { Client, GatewayIntentBits, Partials } from 'discord.js';
 import { Message } from './types/message';
 import { ClientOptions } from './interfaces/client-options.interface';
+import { Logger } from '@nestjs/common';
 
 export class DiscordTransporter
   extends Server
@@ -29,7 +30,7 @@ export class DiscordTransporter
 
   async listen(callback: () => any) {
     this.client.on('ready', () => {
-      this.logger.log('Discord client listening event');
+      Logger.log('Discord client listening event', 'Discord Client');
     });
 
     this.client.on('messageCreate', async (message: Message) => {
