@@ -1,8 +1,8 @@
 import { CustomTransportStrategy, Server } from '@nestjs/microservices';
+import { Logger } from '@nestjs/common';
 import { Client, GatewayIntentBits, Partials } from 'discord.js';
 import { Message } from './types/message';
 import { ClientOptions } from './interfaces/client-options.interface';
-import { Logger } from '@nestjs/common';
 
 export class DiscordTransporter
   extends Server
