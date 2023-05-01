@@ -35,7 +35,10 @@ export class DiscordTransporter
 
     this.client.on('messageCreate', async (message: Message) => {
       const messageHandler = this.messageHandlers.get('messageCreate');
-      if (messageHandler) await messageHandler(message);
+
+      if (messageHandler) {
+        await messageHandler(message);
+      }
     });
 
     await this.client.login(this.options?.token || process.env.DISCORD_TOKEN);
