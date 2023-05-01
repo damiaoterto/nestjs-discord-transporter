@@ -7,6 +7,10 @@
     "nestjs",
     "nestjs-transporter"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damiaoterto/nestjs-discord-transporter.git"
+  },
   "author": "Francisco Damião Terto <contato@damiaoterto.dev>",
   "main": "dist/index.js",
   "types": "@types/index.d.ts",

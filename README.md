@@ -74,8 +74,10 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @MessagePattern('messageCreate')
-  getHello(message: Message) {
-    // you message handler here
+  async getHello(message: Message) {
+    message.channel.sendTyping();
+    const response = await this.appService.handleMessage(message.content);
+    message.channel.send(response);
   }
 }
 
